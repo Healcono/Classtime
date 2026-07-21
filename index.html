@@ -376,6 +376,62 @@
         .class-card {
             animation: fadeIn 0.5s ease-out;
         }
+        
+        /* Educational Links */
+        .educational-links {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .edu-link {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #f9f9f9 0%, #ffffff 100%);
+            border: 2px solid #C0C0C0;
+            border-radius: 10px;
+            padding: 20px;
+            text-decoration: none;
+            color: #333;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .edu-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 5px;
+            height: 100%;
+            background: #00008B;
+        }
+        
+        .edu-link:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            border-color: #00008B;
+        }
+        
+        .edu-link i {
+            font-size: 2em;
+            color: #00008B;
+            margin-left: 15px;
+        }
+        
+        .edu-link span {
+            font-size: 1em;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .educational-links {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -478,6 +534,30 @@
                     </thead>
                     <tbody id="scheduleTable"></tbody>
                 </table>
+            </div>
+        </div>
+        
+        <!-- Educational Content Section -->
+        <div class="schedule-section">
+            <h2><i class="fas fa-book-open"></i> محتوای آموزشی</h2>
+            <p style="margin-bottom: 20px; color: #666;">برای مشاهده محتوای آموزشی، روی عنوان مورد نظر کلیک کنید:</p>
+            <div class="educational-links">
+                <a href="https://abrehamrahi.ir/o/public/ilgSh0RV/" target="_blank" class="edu-link">
+                    <i class="fas fa-play-circle"></i>
+                    <span>اخلاق در پژوهش</span>
+                </a>
+                <a href="https://abrehamrahi.ir/o/public/HF4nZnzf/" target="_blank" class="edu-link">
+                    <i class="fas fa-play-circle"></i>
+                    <span>۱ - نحوه نگارش پرسش تحقیق</span>
+                </a>
+                <a href="https://abrehamrahi.ir/o/public/cPbdRnAe/" target="_blank" class="edu-link">
+                    <i class="fas fa-play-circle"></i>
+                    <span>۲ - نحوه نگارش پرسش تحقیق</span>
+                </a>
+                <a href="https://abrehamrahi.ir/o/public/Z6U1uvH2/" target="_blank" class="edu-link">
+                    <i class="fas fa-play-circle"></i>
+                    <span>تفاوت نمونه گیری با تصادفی سازی نمونه در مطالعات RCT</span>
+                </a>
             </div>
         </div>
         
